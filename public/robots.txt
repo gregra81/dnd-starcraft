@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dnd-starcraft.vercel.app/sitemap.xml
