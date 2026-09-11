@@ -3,6 +3,7 @@ import { successChance } from '../engine/dice'
 import { STAT_LABELS } from '../data/races'
 import { GlossaryParagraphs } from './GlossaryText'
 import { RACE_THEME } from './theme'
+import { ENDING_COUNT } from '../data/story'
 import type { Choice, GameState, StoryNode } from '../types'
 
 interface Props {
@@ -30,13 +31,18 @@ export function StoryView({ node, state, onChoose, onBack, onRestart }: Props) {
 
       {node.ending ? (
         <div className="mt-10">
-          <p className={`text-center text-sm font-semibold ${theme.text}`}>סוף הפרק</p>
+          <p className={`text-center text-lg font-extrabold ${theme.text}`}>הסוף</p>
+          <p className="text-ink-dim mt-3 text-center text-sm leading-relaxed">
+            הגעת לסוף של הסיפור. הסוף הזה הוא תוצאה של הבחירות שלך לאורך הדרך, ובחירות אחרות היו מביאות
+            אותך לסוף אחר לגמרי.
+            {state.raceId && ` לדמות הזאת יש ${ENDING_COUNT[state.raceId]} סופים שונים, ומצאת אחד מהם.`}
+          </p>
           <button
             type="button"
             onClick={onRestart}
-            className="border-void-600 bg-void-800 active:bg-void-700 mt-4 w-full rounded-2xl border px-4 py-4 text-base font-semibold"
+            className="border-void-600 bg-void-800 active:bg-void-700 mt-5 w-full rounded-2xl border px-4 py-4 text-base font-semibold"
           >
-            שחק שוב
+            שחק שוב ותנסה דרך אחרת
           </button>
         </div>
       ) : (
