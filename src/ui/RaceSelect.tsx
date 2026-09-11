@@ -16,7 +16,7 @@ export function RaceSelect({ onSelect, onOpenSaveCode, onOpenHelp }: Props) {
         <p className="text-ink-dim text-xs tracking-[0.35em]">סקטור קופרולו · 2499</p>
         <h1 className="mt-2 text-4xl font-extrabold">כוכב הנחיל</h1>
         <p className="text-ink-dim mt-3 text-sm leading-relaxed">
-          ספר משחק אינטראקטיבי ביקום סטארקראפט. בחר את הדמות שלך — ההחלטות שלך יקבעו את גורל הסקטור.
+          ספר משחק מעולם סטארקראפט. אתה בוחר דמות, ואתה מחליט מה קורה בסיפור. כל החלטה משנה את הסוף.
         </p>
       </header>
 
