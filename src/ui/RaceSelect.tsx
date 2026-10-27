@@ -70,6 +70,13 @@ export function RaceSelect({ onSelect, onOpenSaveCode, onOpenHelp }: Props) {
       >
         יש לי קוד שמירה
       </button>
+
+      <p className="text-ink-dim text-center text-xs">
+        נבנה ע״י{' '}
+        <a href="https://gregras.com" dir="ltr" className="underline">
+          Greg Rashkevitch
+        </a>
+      </p>
     </div>
   )
 }
